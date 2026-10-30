@@ -1,0 +1,1075 @@
+/* =========================================================
+   WAWA BAKEHOUSE - MODERN ELEGANT BAKERY STYLE
+   Theme: Warm Green, Rich Brown, Cream, and Creamy Orange
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+/* =========================
+   RESET & VARIABLE SYSTEM
+   ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --wawa-green: #8BA889;
+    --wawa-green-dark: #687F67;
+    --wawa-cream: #ECE9D8;
+    --wawa-cream-light: #FAF8F5;
+    --wawa-brown: #4A2B0F;
+    --wawa-brown-dark: #2D1908;
+    --wawa-brown-light: #6B4525;
+    --wawa-orange: #D87919;
+    --wawa-orange-light: #E69A4A;
+    --wawa-white: #FFFFFF;
+    --shadow-soft: 0 10px 30px rgba(74, 43, 15, 0.08);
+    --shadow-hover: 0 15px 35px rgba(74, 43, 15, 0.15);
+    --radius-card: 16px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--wawa-cream-light);
+    color: var(--wawa-brown);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* =========================
+   HEADER & BANNER KONSISTEN
+   ========================= */
+header {
+    background-color: var(--wawa-green);
+    border-bottom: 4px solid var(--wawa-orange);
+    position: relative;
+}
+
+.banner {
+    width: 100%;
+    min-height: 280px;
+    background-image: linear-gradient(rgba(45, 25, 8, 0.55), rgba(45, 25, 8, 0.55)), url("img/Banner 2 Wawa.jpeg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    color: var(--wawa-white);
+    text-align: center;
+}
+
+.banner h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 8px;
+}
+
+.banner p {
+    font-size: 1.15rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    opacity: 0.95;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================
+   NAVIGASI MODERN (STICKY)
+   ========================= */
+nav {
+    background-color: var(--wawa-brown);
+    text-align: center;
+    padding: 8px 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+nav a {
+    color: var(--wawa-cream);
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 30px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+}
+
+nav a:hover, nav a.active {
+    background-color: var(--wawa-orange);
+    color: var(--wawa-white);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(216, 121, 25, 0.35);
+}
+
+/* =========================
+   MAIN CONTAINER & CARDS
+   ========================= */
+main {
+    max-width: 1140px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.content-card {
+    background-color: var(--wawa-white);
+    padding: 45px 40px;
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(139, 168, 137, 0.15);
+}
+
+main h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--wawa-brown);
+    font-size: 2.2rem;
+    position: relative;
+    font-weight: 700;
+}
+
+main h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--wawa-orange);
+    margin: 12px auto 0;
+    border-radius: 3px;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 780px;
+    margin: 0 auto 20px auto;
+    color: #5a483a;
+    line-height: 1.8;
+}
+
+/* =========================================================
+   ROTI'O STYLE PRODUCTS MENU SECTION (PAGE: PRODUCTS)
+   ========================================================= */
+.rotio-menu-section {
+    background-color: var(--wawa-cream-light);
+    padding: 50px 30px;
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(139, 168, 137, 0.2);
+    text-align: center;
+}
+
+.rotio-menu-header {
+    margin-bottom: 45px;
+}
+
+.rotio-menu-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #3b200b;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.rotio-menu-header h2::after {
+    display: none;
+}
+
+.rotio-badge-pill {
+    display: inline-block;
+    background-color: #53331b;
+    color: #ffffff;
+    font-size: 1.15rem;
+    font-weight: 700;
+    padding: 10px 30px;
+    border-radius: 30px;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.rotio-tagline {
+    font-size: 1.2rem;
+    color: #4a3628;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.rotio-tagline em {
+    font-weight: 700;
+    font-style: italic;
+    color: #2e1a0c;
+}
+
+.rotio-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 35px;
+    align-items: start;
+}
+
+.rotio-menu-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.rotio-menu-card:hover {
+    transform: translateY(-5px);
+}
+
+.rotio-img-box {
+    width: 220px;
+    height: 250px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rotio-img-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.15));
+}
+
+.rotio-title-pill {
+    background-color: #ba9d89;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: 25px;
+    letter-spacing: 1px;
+    width: 100%;
+    max-width: 260px;
+    margin-bottom: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+}
+
+.rotio-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--wawa-orange);
+    margin-bottom: 6px;
+}
+
+.rotio-desc {
+    font-size: 0.95rem;
+    color: #665243;
+    line-height: 1.5;
+    max-width: 240px;
+}
+
+/* =========================================================
+   PROMO SECTION (PAGE: BERANDA - VIA DAPUR.JPEG)
+   ========================================================= */
+.promo-section-rotio {
+    margin-top: 40px;
+    background-color: var(--wawa-white);
+    padding: 40px;
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(139, 168, 137, 0.2);
+}
+
+.promo-title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.promo-subtitle-line {
+    flex: 1;
+    height: 2px;
+    background-color: var(--wawa-cream);
+    max-width: 150px;
+}
+
+.promo-title-wrapper h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--wawa-brown);
+    margin: 0;
+}
+
+.promo-banner-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(74, 43, 15, 0.15);
+    background-color: var(--wawa-brown-dark);
+}
+
+.promo-image-container {
+    width: 100%;
+    height: 380px;
+}
+
+.promo-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+}
+
+.promo-overlay-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(45, 25, 8, 0.95), rgba(45, 25, 8, 0.4), transparent);
+    color: var(--wawa-white);
+}
+
+.promo-badge {
+    background-color: var(--wawa-orange);
+    color: var(--wawa-white);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.promo-overlay-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 8px;
+    color: var(--wawa-white);
+}
+
+.promo-desc {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    opacity: 0.95;
+}
+
+.promo-tagline {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+/* =========================================================
+   JELAJAHI KAMI SECTION (PAGE: TENTANG - VIA TAMAN.JPEG)
+   ========================================================= */
+.explore-section-rotio {
+    background-color: var(--wawa-white);
+    padding: 45px 40px;
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(139, 168, 137, 0.2);
+    margin-bottom: 35px;
+}
+
+.explore-header-row {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.explore-subtitle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.explore-line {
+    width: 40px;
+    height: 2px;
+    background-color: var(--wawa-brown-light);
+}
+
+.explore-subtitle {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--wawa-brown-light);
+    text-transform: uppercase;
+}
+
+.explore-header-row h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    color: var(--wawa-brown);
+    margin-bottom: 10px;
+}
+
+.explore-desc-top {
+    color: #5a483a;
+    font-size: 1.05rem;
+}
+
+.explore-content-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.explore-image-box {
+    width: 100%;
+    height: 320px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(74, 43, 15, 0.12);
+}
+
+.explore-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.explore-image-box:hover img {
+    transform: scale(1.05);
+}
+
+.explore-text-box .explore-lead {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--wawa-brown);
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.explore-text-box p {
+    color: #5a483a;
+    line-height: 1.8;
+}
+
+/* =========================================================
+   OWNER PROFILE SECTION (UWA.JPEG)
+   ========================================================= */
+.owner-profile-card {
+    background-color: var(--wawa-white);
+}
+
+.owner-container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 35px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.owner-img-box {
+    width: 100%;
+    height: 320px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(74, 43, 15, 0.12);
+}
+
+.owner-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.owner-info-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--wawa-brown);
+    margin: 10px 0 15px 0;
+}
+
+.owner-info-box p {
+    color: #5a483a;
+    line-height: 1.8;
+}
+
+/* =========================================================
+   AESTHETIC SPOTLIGHT SECTION (INDEX - CHIKI.JPEG)
+   ========================================================= */
+.aesthetic-spotlight {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    background-color: var(--wawa-white);
+    margin-top: 40px;
+    padding: 40px;
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(139, 168, 137, 0.2);
+}
+
+.spotlight-image {
+    width: 100%;
+    height: 320px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(74, 43, 15, 0.12);
+}
+
+.spotlight-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.spotlight-image:hover img {
+    transform: scale(1.05);
+}
+
+.spotlight-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.spotlight-tag {
+    display: inline-block;
+    background-color: var(--wawa-cream);
+    color: var(--wawa-brown);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    width: fit-content;
+    border: 1px solid rgba(139, 168, 137, 0.3);
+}
+
+.spotlight-text h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--wawa-brown);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.spotlight-text p {
+    color: #5a483a;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* =========================================================
+   TENTANG KAMI SECTION
+   ========================================================= */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 35px 0;
+}
+
+.about-card {
+    background-color: var(--wawa-cream-light);
+    padding: 30px 20px;
+    border-radius: var(--radius-card);
+    text-align: center;
+    border: 1px solid rgba(139, 168, 137, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.about-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.about-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: var(--wawa-brown);
+    margin-bottom: 10px;
+}
+
+.about-card p {
+    font-size: 0.95rem;
+    color: #5a483a;
+    line-height: 1.6;
+}
+
+.vision-mission {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.vm-box {
+    background-color: var(--wawa-white);
+    padding: 30px;
+    border-radius: var(--radius-card);
+    border-left: 5px solid var(--wawa-orange);
+    box-shadow: var(--shadow-soft);
+}
+
+.vm-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--wawa-brown);
+    margin-bottom: 10px;
+}
+
+.vm-box p {
+    color: #5a483a;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   PENGIRIMAN SECTION
+   ========================================================= */
+.shipping-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 35px 0;
+}
+
+.shipping-card {
+    background-color: var(--wawa-cream-light);
+    padding: 30px 20px;
+    border-radius: var(--radius-card);
+    text-align: center;
+    border: 1px solid rgba(139, 168, 137, 0.2);
+    border-top: 4px solid var(--wawa-orange);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.shipping-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.shipping-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.shipping-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: var(--wawa-brown);
+    margin-bottom: 10px;
+}
+
+.shipping-card p {
+    font-size: 0.95rem;
+    color: #5a483a;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.shipping-link {
+    display: inline-block;
+    background-color: var(--wawa-orange);
+    color: var(--wawa-white);
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: auto;
+}
+
+.shipping-link:hover {
+    background-color: #c16713;
+    transform: translateY(-2px);
+}
+
+.shipping-note {
+    background-color: var(--wawa-white);
+    padding: 25px 30px;
+    border-radius: var(--radius-card);
+    border-left: 5px solid var(--wawa-green);
+    box-shadow: var(--shadow-soft);
+    margin-top: 30px;
+}
+
+.shipping-note h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--wawa-brown);
+    margin-bottom: 12px;
+}
+
+.shipping-note ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #5a483a;
+}
+
+.shipping-note li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+/* =========================================================
+   LAYANAN / SERVICE SECTION
+   ========================================================= */
+.service-box-center {
+    background-color: var(--wawa-cream-light);
+    padding: 35px 30px;
+    border-radius: var(--radius-card);
+    text-align: center;
+    border: 1px solid rgba(139, 168, 137, 0.2);
+    border-top: 5px solid var(--wawa-orange);
+    margin: 30px 0;
+    box-shadow: var(--shadow-soft);
+}
+
+.service-big-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.service-box-center h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--wawa-brown);
+    margin-bottom: 12px;
+}
+
+.service-box-center p {
+    color: #5a483a;
+    font-size: 1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.service-steps {
+    margin-top: 40px;
+}
+
+.service-steps h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--wawa-brown);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.step-card {
+    background-color: var(--wawa-white);
+    padding: 25px 20px;
+    border-radius: var(--radius-card);
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+}
+
+.step-number {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    background-color: var(--wawa-orange);
+    color: var(--wawa-white);
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.step-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    color: var(--wawa-brown);
+    margin-bottom: 8px;
+}
+
+.step-card p {
+    font-size: 0.9rem;
+    color: #5a483a;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   SECTION KONTAK
+   ========================================================= */
+.kontak-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.info-box {
+    background-color: var(--wawa-cream-light);
+    padding: 30px 20px;
+    border-radius: var(--radius-card);
+    text-align: center;
+    border: 1px solid rgba(139, 168, 137, 0.2);
+    border-top: 4px solid var(--wawa-orange);
+    transition: transform 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-3px);
+}
+
+.info-box .icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.info-box h3 {
+    font-size: 1.1rem;
+    color: var(--wawa-brown);
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.info-box p {
+    color: var(--wawa-brown-light);
+    font-weight: 500;
+}
+
+/* =========================================================
+   FOOTER ALA ROTI'O (SESUAI FOTO)
+   ========================================================= */
+.rotio-footer {
+    background-color: #e5e3d8;
+    color: #3b2818;
+    padding-top: 40px;
+    margin-top: 60px;
+    border-top: 1px solid #d0cebf;
+}
+
+.footer-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px 40px 20px;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Logo Lingkaran Kiri */
+.footer-brand-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-logo-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #d2a46c;
+    border: 3px solid #3b2818;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 12px;
+}
+
+.footer-logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer-brand-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #3b2818;
+    letter-spacing: 1px;
+}
+
+/* Kolom Kanan */
+.footer-info-col h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #3b2818;
+    margin-bottom: 12px;
+}
+
+.footer-help-text {
+    font-size: 0.92rem;
+    color: #554435;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    max-width: 780px;
+}
+
+.footer-wa-contact {
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: #3b2818;
+    margin-bottom: 20px;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-social-icons a {
+    width: 32px;
+    height: 32px;
+    background-color: #3b2818;
+    color: #e5e3d8;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-social-icons a:hover {
+    background-color: var(--wawa-orange);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Bar Bawah & Panah Atas */
+.footer-bottom-bar {
+    border-top: 1px solid #d0cebf;
+    background-color: #dad8cb;
+    text-align: center;
+    padding: 15px 20px;
+    position: relative;
+}
+
+.back-to-top-btn {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: #e09228;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-to-top-btn:hover {
+    background-color: #c87c17;
+    transform: translateX(-50%) translateY(-3px);
+}
+
+.copyright-text {
+    font-size: 0.85rem;
+    color: #6a5849;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 8px;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN (TABLET & MOBILE)
+   ========================================================= */
+@media screen and (max-width: 768px) {
+    .banner h1 { font-size: 2.1rem; }
+    .banner p { font-size: 1rem; }
+    .content-card { padding: 30px 20px; }
+    main h2 { font-size: 1.8rem; }
+
+    .rotio-menu-header h2 { font-size: 2rem; }
+    .rotio-badge-pill { font-size: 0.95rem; padding: 8px 20px; }
+    .rotio-tagline { font-size: 1rem; }
+    .rotio-img-box { height: 200px; }
+
+    .explore-content-grid,
+    .owner-container,
+    .aesthetic-spotlight {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 25px 20px;
+    }
+
+    .explore-image-box,
+    .owner-img-box,
+    .spotlight-image {
+        height: 240px;
+    }
+
+    .promo-image-container { height: 260px; }
+    .promo-overlay-content h3 { font-size: 1.5rem; }
+
+    /* Footer Mobile */
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+    }
+    .footer-info-col h3 {
+        font-size: 1.15rem;
+    }
+    .footer-social-icons {
+        justify-content: center;
+    }
+}
